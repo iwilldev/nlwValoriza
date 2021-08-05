@@ -1,3 +1,4 @@
+import { Expose } from 'class-transformer';
 import { Entity, PrimaryColumn, Column, CreateDateColumn, UpdateDateColumn } from 'typeorm';
 import { v4 as uuid } from 'uuid';
 
@@ -14,6 +15,11 @@ class Tag {
 
   @UpdateDateColumn()
   updated_at: Date;
+
+  @Expose({ name: 'hashtag' })
+  hashtag(): string {
+    return `#${this.name.toLowerCase()}`;
+  }
 
   constructor() {
     if (!this.id) {
