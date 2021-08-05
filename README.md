@@ -33,3 +33,15 @@
   - Criar um front-end
   - Adicionar Cors no Express (cors - @types/cors - app.use(cors()))
   - Upload de imagem/avatar
+
+  _______________________________________
+
+## Test Instructions
+
+```bash
+git clone https://github.com/williammago/nlwValoriza.git
+cd nlwValoriza
+yarn install
+yarn typeorm migration:run
+yarn dev
+```
